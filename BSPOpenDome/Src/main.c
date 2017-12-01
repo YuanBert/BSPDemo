@@ -252,20 +252,20 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
     
     if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(VerticalRaster_GPIO_Port,VerticalRaster_Pin))
     {
-      gVState = 0;
+      gVState = 1;
     }
     else
     {
-      gVState = 1;
+      gVState = 0;
     }
     
     if(GPIO_PIN_RESET == HAL_GPIO_ReadPin(HorizontalRaster_GPIO_Port,HorizontalRaster_Pin))
     {
-      gHState = 0;
+      gHState = 1;
     }
     else
     {
-      gHState = 1;
+      gHState = 0;
     }
     
     gTIM4Cnt ++;
